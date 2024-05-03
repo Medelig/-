@@ -16,3 +16,19 @@ void PrintArray(string[] array)  // Метод для вывода массив�
         Console.Write(", ");
     }
 }
+
+string[] FinalArray()  // Метод для создания массива cогласно условиям.
+{
+    string[] array = CreateArray();
+    string Fstring = String.Empty;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length <= 3)
+        {
+            Fstring = Fstring + array[i] + ",";
+        }
+    }
+    Fstring = Fstring.Remove(Fstring.Length-1); // Для удаления запятой в конце.
+    string[] NewArray = Fstring.Split(",");
+    return NewArray;
+}
