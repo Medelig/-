@@ -32,3 +32,9 @@ string[] FinalArray()  // Метод для создания массива cо�
     string[] NewArray = Fstring.Split(",");
     return NewArray;
 }
+
+string[] array = CreateArray();
+System.Console.WriteLine($"Исходный массив: [{string.Join(", ", array)}]"); // Исходный массив.
+System.Console.WriteLine();
+System.Console.WriteLine($"Массив согласно условиям: ");
+PrintArray(FinalArray()); // Финальнй массив.
